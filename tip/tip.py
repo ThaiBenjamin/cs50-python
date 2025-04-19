@@ -6,11 +6,11 @@ def main():
 
 
 def dollars_to_float(d):
-    return float(d.strip([0]))
+    return float(d.strip("$"))
 
 
 def percent_to_float(p):
-    return float(p.strip([d.len()-1]))
+    return float(p.strip("%")) * 0.01
 
 
 main()
