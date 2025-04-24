@@ -1,8 +1,9 @@
-import Inflect
+import inflect
 while True:
-    user_input = input("Name: ")
+
+    list_of_names = []
     try:
-
-
-    except EORError:
-        print("Adieu, adieu, to )
+        user_input = input("Name: ")
+        list_of_names.append(user_input)
+    except EOFError:
+        print("Adieu, adieu, to", inflect.join(list_of_names))
