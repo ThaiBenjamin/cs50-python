@@ -13,6 +13,6 @@ else:
 
 figlet.setFont(font=f)
 user_input = input("Input: ")
-print("Output:",figlet.renderText(s))
+print("Output:",figlet.renderText(user_input))
 
 
