@@ -1,4 +1,5 @@
 from pyfiglet import Figlet
 
+user_input = input("Input: ")
 f = Figlet(font='slant')
-print(f.renderText('text to render'))
+print("Output:",f.renderText(user_input))
