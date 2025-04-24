@@ -5,4 +5,4 @@ while True:
 
 
     except EORError:
-        break
+        print("Adieu, adieu, to )
