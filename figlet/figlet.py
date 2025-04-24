@@ -1,5 +1,8 @@
 from pyfiglet import Figlet
+import sys, random
 
+figlet = Figlet()
+figlet.getFonts()
+figlet.setFont(font=f)
 user_input = input("Input: ")
-f = Figlet(font=get)
-print("Output:",f.renderText(user_input))
+print("Output:",figlet.renderText(s))
