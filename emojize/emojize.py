@@ -1,4 +1,4 @@
 from emoji import emojize
 
-user_input = input("Input: ")
+user_input = input()
 print(emojize(user_input))
