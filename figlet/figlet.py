@@ -1,5 +1,5 @@
 from pyfiglet import Figlet
 
 user_input = input("Input: ")
-f = Figlet()
+f = Figlet("font")
 print("Output:",f.renderText(user_input))
