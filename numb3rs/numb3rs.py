@@ -7,11 +7,8 @@ def main():
 
 
 def validate(ip):
-    ...
-
-
-...
-
+    user_input = ip
+    return re.search(r".+[0-255]/..+[0-255]/..+[0-255]/..+[0-255]", user_input)
 
 if __name__ == "__main__":
     main()
