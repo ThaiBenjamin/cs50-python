@@ -1,5 +1,13 @@
-from validator_collection import validators
+from validator_collection import validators, checkers
 
 user_input = input("What's your email address? ")
 
-print(validators.email(user_input, allow_empty = False))
+try:
+    if checkers.is_email(user_input, allow_empty = False):
+        print("Valid")
+    else:
+        print("Invalid")
+except:
+    print("Invalid")
+
+
