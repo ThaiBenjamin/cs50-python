@@ -9,8 +9,8 @@ def main():
 def validate(ip):
     user_input = ip
 
-    if match := re.search(r"^[0-255]\.[0-255]+\.[0-255]+\.[0-255]+$", user_input):
-        return True
+    if match := re.search(r"^([0-9]+)\.([0-9]+)\.([0-9]+)\.([0-9]+)$", user_input):
+        if match.group(1) and math.group(2)
     else:
         return False
 
