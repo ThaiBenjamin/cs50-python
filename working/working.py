@@ -17,10 +17,14 @@ def convert(s):
         converted_second_hours = 0
 
         if first_number_components[2] == "PM":
-            converted_first_hours = int(first_number_components[1]) + 12
+            converted_first_hours = int(first_number_components[0]) + 12
+
+        else:
+            
 
         if second_number_components[2] == "PM":
-            converted_second_hours = int(second_number_components[1]) + 12
+            converted_second_hours = int(second_number_components[0]) + 12
+
 
         print(str(converted_first_hours) + str(converted_second_hours))
 
