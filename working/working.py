@@ -17,15 +17,21 @@ def convert(s):
     second_hours = int(list[5])
     second_minutes = list[6]
 
-    if list[3] == "PM":
+    if list[3] == "PM" and first_hours != 12:
         first_hours = 12 + first_hours
     else:
-        first_hours = 0 + first_hours
+        if list[3] == "AM" and first_hours == 12:
+            first_hours = 0
+        else:
+            first_hours = 0 + first_hours
 
-    if list[7] == "PM":
+    if list[7] == "PM" and second_hours != 12:
         second_hours = 12 + second_hours
     else:
-        second_hours = 0 + second_hours
+        if list[7] == "AM" and second_hours == 12:
+            second_hours = 0
+        else:
+            second_hours = 0 + second_hours
 
     if first_minutes == None:
         first_minutes = "00"
@@ -33,7 +39,7 @@ def convert(s):
 
     if second_minutes == None:
         second_minutes = "00"
-    
+
 
     if len(str(first_hours)) == 1:
         first_hours = "0"+ str(first_hours)
