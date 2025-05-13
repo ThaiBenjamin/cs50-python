@@ -7,15 +7,15 @@ def main():
 
 
 def convert(s):
-    if match := re.search(r"^(([0-9][0-2]*):([0-5][0-9])*) ([A-P]M) to (([0-9][0-2]*):([0-5][0-9])*) ([A-P]M)$",s):
+    if match := re.search(r"^(([0-9][0-2]*):*([0-5][0-9])*) ([A-P]M) to (([0-9][0-2]*):*([0-5][0-9])*) ([A-P]M)$",s):
         list = match.groups()
     else:
         raise ValueError
-  
+
     first_hours = int(list[1])
-    first_minutes = int(list[2])
+    first_minutes = None
     second_hours = int(list[5])
-    second_minutes = int(list[6])
+    second_minutes = None
 
     if list[3] == "PM":
         first_hours = 12 + first_hours
@@ -27,9 +27,9 @@ def convert(s):
     else:
         second_hours = 0 + second_hours
 
-    if first_minutes == 0:
+    if first_minutes == None:
         first_minutes = "00"
-    if second_minutes == 0:
+    if second_minutes == None:
         second_minutes = "00"
     if len(str(first_hours)) == 1:
         first_hours = "0"+ str(first_hours)
