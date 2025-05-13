@@ -13,10 +13,10 @@ def convert(s):
         raise ValueError
 
     first_hours = int(list[1])
-    first_minutes = None
+    first_minutes = list[2]
     second_hours = int(list[5])
-    second_minutes = None
-    print(list)
+    second_minutes = list[6]
+
     if list[3] == "PM":
         first_hours = 12 + first_hours
     else:
@@ -29,13 +29,11 @@ def convert(s):
 
     if first_minutes == None:
         first_minutes = "00"
-    else:
-        first_minutes = int(list[2])
+
 
     if second_minutes == None:
         second_minutes = "00"
-    else:
-        second_minutes = int(list[6])
+    
 
     if len(str(first_hours)) == 1:
         first_hours = "0"+ str(first_hours)
