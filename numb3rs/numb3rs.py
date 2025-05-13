@@ -11,7 +11,7 @@ def validate(ip):
     if re.search(r"^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$", ip):
         number_list = ip.split(".")
         for i in number_list:
-            if i < 0 or i > 255:
+            if int(i) < 0 or int(i) > 255:
                 return False
         return True
     else:
