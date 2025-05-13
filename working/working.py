@@ -13,14 +13,15 @@ def convert(s):
         second_number = match.group(2)
         second_number_components= re.split(r"[: ]", second_number)
 
-        converted_first_hours = 0
-        converted_second_hours = 0
+        converted_first_hours = 12
+        converted_second_hours = 12
 
         if first_number_components[2] == "PM":
             converted_first_hours = int(first_number_components[0]) + 12
 
         else:
-            
+            converted_first_hours
+
 
         if second_number_components[2] == "PM":
             converted_second_hours = int(second_number_components[0]) + 12
