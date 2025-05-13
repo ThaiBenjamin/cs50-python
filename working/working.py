@@ -12,10 +12,8 @@ def convert(s):
         second_number = match.group(2).strip()
 
         if "PM" in first_number:
-            first_number = first_number.remove("PM")
             print(first_number)
         if "PM" in second_number:
-            second_number = second_number.remove("AM")
             print(second_number)
 
     else:
