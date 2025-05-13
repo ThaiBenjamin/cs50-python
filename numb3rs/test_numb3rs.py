@@ -1,5 +1,9 @@
 from numb3rs import validate
 
+def main():
+    test_true()
+    test_false
+
 def test_true():
     assert validate("0.0.0.0") == True
     assert validate("255.255.255.255") == True
@@ -10,3 +14,6 @@ def test_false():
     assert validate("275.10.0.0") == False
     assert validate("5.0.200.250") == False
     assert validate("hi my name is ben") == False
+
+if __name__ == "__main__":
+    main()
