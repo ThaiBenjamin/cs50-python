@@ -10,4 +10,7 @@ def true_cases():
 
 def false_cases():
      with pytest.raises(ValueError):
-        convert('three/four')
+        convert(r"9:60 AM to 5:60 PM")
+        convert(r"9 AM - 5 PM")
+        convert(r"09:00 AM - 17:00 PM")
+
