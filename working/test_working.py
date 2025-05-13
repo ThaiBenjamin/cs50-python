@@ -1,5 +1,6 @@
-from working import convert
 import pytest
+from working import convert
+
 
 def true_cases():
     assert convert(r"9 AM to 5 PM") == "09:00 to 17:00"
