@@ -10,9 +10,22 @@ def test_true_cases():
 
 
 def test_false_cases():
-     with pytest.raises(ValueError):
-        convert(r"9:60 AM to 5:60 PM")
-        convert(r"9 AM - 5 PM")
-        convert(r"09:00 AM - 17:00 PM")
-        convert(r"9:50 AM 5:40 PM")
+
+    with pytest.raises(ValueError):
+        convert("9:60 AM to 5:60 PM")
+
+    with pytest.raises(ValueError):
+        convert("9 AM - 5 PM")
+
+    with pytest.raises(ValueError):
+        convert("09:00 AM - 17:00 PM")
+
+    with pytest.raises(ValueError):
+        convert("9:50 AM 5:40 PM")
+
+    with pytest.raises(ValueError):
+        convert("0 AM to 5 PM")
+
+    with pytest.raises(ValueError):
+        convert("13 AM to 5 PM")
 
