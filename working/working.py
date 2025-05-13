@@ -8,13 +8,13 @@ def main():
 
 def convert(s):
     if match := re.search(r"([0-9_: ]+(?:AM)?(?:PM)?) to ([0-9_: ]+(?:AM)?(?:PM)+)",s):
-        first_number = match.group(1).strip()
-        second_number = match.group(2).strip()
+        first_number_components = match.group(1).split(":")
+        second_number_components = match.group(2).split(":")
 
-        if "PM" in first_number:
-            print(first_number)
-        if "PM" in second_number:
-            print(second_number)
+        print(first_number_components)
+
+
+
 
     else:
         raise ValueError
