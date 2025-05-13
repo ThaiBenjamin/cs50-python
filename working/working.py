@@ -7,7 +7,7 @@ def main():
 
 
 def convert(s):
-    if re.search("+,s):
+    if re.search(r".+ (?:AMto .+",s):
 
 
 if __name__ == "__main__":
