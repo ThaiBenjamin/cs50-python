@@ -2,7 +2,7 @@ def main():
     user_input = input("Input: ")
     print("Output:", shorten(user_input))
 
-def shorten(n)
+def shorten(n):
 
     output = ""
     for c in n:
