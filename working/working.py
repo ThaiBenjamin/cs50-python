@@ -7,43 +7,36 @@ def main():
 
 
 def convert(s):
-    if match := re.search(r"([0-9_: ]+(?:AM)?(?:PM)?) to ([0-9_: ]+(?:AM)?(?:PM)+)",s):
-        first_number = match.group(1)
-        first_number_components= re.split(r"[: ]", first_number)
-        second_number = match.group(2)
-        second_number_components= re.split(r"[: ]", second_number)
-
-        converted_first_hours = 12
-        converted_second_hours = 12
-
-        if first_number_components[2] == "PM":
-            converted_first_hours = int(first_number_components[0]) + 12
-
-        else:
-            converted_first_hours = 0 + int(first_number_components[0])
-
-
-        if second_number_components[2] == "PM":
-            converted_second_hours = int(second_number_components[0]) + 12
-
-        else:
-            converted_second_hours = 0 + int(second_number_components[0])
-
-        
-
-
-        print(str(converted_first_hours) + str(converted_second_hours))
-
-
-
-        print(first_number_components)
-
-
-
-
+    if match := re.search(r"^(([0-9][0-2]*):([0-5][0-9])*) ([A-P]M) to (([0-9][0-2]*):([0-5][0-9])*) ([A-P]M)$",s):
+        list = match.groups()
     else:
         raise ValueError
+  
+    first_hours = int(list[1])
+    first_minutes = int(list[2])
+    second_hours = int(list[5])
+    second_minutes = int(list[6])
 
+    if list[3] == "PM":
+        first_hours = 12 + first_hours
+    else:
+        first_hours = 0 + first_hours
+
+    if list[7] == "PM":
+        second_hours = 12 + second_hours
+    else:
+        second_hours = 0 + second_hours
+
+    if first_minutes == 0:
+        first_minutes = "00"
+    if second_minutes == 0:
+        second_minutes = "00"
+    if len(str(first_hours)) == 1:
+        first_hours = "0"+ str(first_hours)
+    if len(str(second_hours)) == 1:
+        second_hours = "0"+ str(first_hours)
+
+    return (f"{first_hours}:{first_minutes} to {second_hours}:{second_minutes}")
 
 if __name__ == "__main__":
     main()
