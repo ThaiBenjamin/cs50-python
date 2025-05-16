@@ -8,18 +8,23 @@ def main():
     print("You will have a certain number of guesses to guess your number from a range of your choosing!")
     lower_bound = input("What is your lower bound: ")
     upper_bound = input("What is your upper bound: ")
+
+    while check_bounds(lower_bound, upper_bound) == False:
+        lower_bound = input("What is your lower bound: ")
+        upper_bound = input("What is your upper bound: ")
+
+
     if check_bounds(lower_bound, upper_bound):
         generate_random_number(lower_bound, upper_bound)
 
 
 def check_bounds(lower, upper):
-    while True:
-        try:
-            lower_bound = int(lower)
-            upper_bound = int(upper)
-            break
-        except ValueError:
-            print("Please print a valid integer")
+    try:
+        lower_bound = int(lower)
+        upper_bound = int(upper)
+    except ValueError:
+        print("Please print a valid integer")
+        return False
 
     while lower_bound >= upper_bound:
             print("Make sure your lower bound is smaller than your upper bound")
