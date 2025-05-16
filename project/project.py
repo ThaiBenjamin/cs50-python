@@ -1,28 +1,39 @@
 import random
 import math
 
-print("Welcome to Ben's Guessing Dooms Game!")
-print("You will have a certain number of guesses to guess your number from a range of your choosing!")
+
+
 def main():
+    print("Welcome to Ben's Guessing Dooms Game!")
+    print("You will have a certain number of guesses to guess your number from a range of your choosing!")
+    lower_bound = input("What is your lower bound: ")
+    upper_bound = input("What is your upper bound: ")
+    if check_bounds(lower_bound, upper_bound):
+        generate_random_number(lower_bound, upper_bound)
+
 
 def check_bounds(lower, upper):
-while True:
-    try:
-        lower_bound = int(input("What is your lower bound: "))
-        upper_bound = int(input("What is your upper bound: "))
-        break
-    except ValueError:
-        print("Please input a valid integer")
+    while True:
+        try:
+            lower_bound = int(lower)
+            upper_bound = int(upper)
+            break
+        except ValueError:
+            print("Please print a valid integer")
 
-while lower_bound >= upper_bound:
-        print("Make sure your lower bound is smaller than your upper bound")
-        while True:
-            try:
-                lower_bound = int(input("What is your lower bound: "))
-                upper_bound = int(input("What is your upper bound: "))
-                break
-            except ValueError:
-                print("Please input a valid integer")
+    while lower_bound >= upper_bound:
+            print("Make sure your lower bound is smaller than your upper bound")
+            while True:
+                try:
+                    lower_bound = int(input("What is your lower bound: "))
+                    upper_bound = int(input("What is your upper bound: "))
+                    break
+                except ValueError:
+                    print("Please input a valid integer")
+    return True
+
+def generate_random_number(lower, upper):
+
 
 
 guessing_number = random.randint(lower_bound, upper_bound)
