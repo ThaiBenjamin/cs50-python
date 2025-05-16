@@ -21,11 +21,11 @@ def main():
     counter = 1
     current_guess = input("Guess a number between " + str(lower_bound) + " and " + str(upper_bound) + ": " )
 
-    while check_guess(current_guess, guessing_number) == False:
+    while check_guess(current_guess) == False:
             current_guess = input("Guess a number between " + str(lower_bound) + " and " + str(upper_bound) + ": " )
 
     while check_guess_correctness(current_guess, guessing_number) == False:
-        while check_guess(current_guess, guessing_number) == False:
+        while check_guess(current_guess) == False:
             current_guess = input("Guess a number between " + str(lower_bound) + " and " + str(upper_bound) + ": " )
         counter+=1
         give_hint(current_guess, guessing_number)
@@ -69,7 +69,7 @@ def check_guess_correctness(user_guess, random_generated_number):
         return True
 
 def give_hint(user_guess, random_generated_number):
-    if user_guess > random_generated_number:
+    if int(user_guess) > random_generated_number:
         print("Guess a number that's lower")
 
     else:
