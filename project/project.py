@@ -25,6 +25,7 @@ def main():
             current_guess = input("Guess a number between " + str(lower_bound) + " and " + str(upper_bound) + ": " )
 
     current_guess = int(current_guess)
+
     while check_guess_correctness(current_guess, guessing_number) == False:
         while check_guess(current_guess) == False:
             current_guess = input("Guess a number between " + str(lower_bound) + " and " + str(upper_bound) + ": " )
@@ -72,10 +73,10 @@ def check_guess_correctness(user_guess, random_generated_number):
 
 def give_hint(user_guess, random_generated_number):
     if user_guess > random_generated_number:
-        return("Guess a number that's lower")
+        print("Guess a number that's lower")
 
     else:
-        return("Guess a number that's higher")
+        print("Guess a number that's higher")
 
 
 def victory_decider(counter, random_generated_number, lower_bound, upper_bound):
