@@ -60,6 +60,7 @@ def check_guess(user_guess):
     except ValueError:
         print("Please input a valid integer")
         return False
+    return True
 
 
 def check_guess_correctness(user_guess, random_generated_number):
