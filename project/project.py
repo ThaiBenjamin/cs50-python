@@ -18,10 +18,13 @@ def main():
 
     guessing_number = generate_random_number(lower_bound, upper_bound)
 
-    counter = 0
-    while check_guess(current_guess, guessing_number) != True:
-        current_guess = input("Guess a number between " + str(lower_bound) + " and " + str(upper_bound) + ": " ))
+    counter = 1
+    current_guess = input("Guess a number between " + str(lower_bound) + " and " + str(upper_bound) + ": " ))
+    check_guess(current_guess, guessing_number)
 
+    while check_guess_correctness(current_guess, guessing_number) == False:
+        while check_guess(current_guess, guessing_number) != True:
+            current_guess = input("Guess a number between " + str(lower_bound) + " and " + str(upper_bound) + ": " ))
         counter+=1
 
     print(guessing_number)
@@ -49,13 +52,15 @@ def guess_number(guess, random_number)
 counter = 0
 current_guess = None
 
-def check_guess(user_guess, random_generated_number):
+def check_guess(user_guess):
     try:
         current_guess = int(user_guess)
     except ValueError:
         print("Please input a valid integer")
         return False
 
+
+def check_guess_correctness(user_guess, random_generated_number)
     if current_guess != random_generated_number:
         return False
 
