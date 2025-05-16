@@ -27,8 +27,10 @@ def main():
     current_guess = int(current_guess)
 
     while check_guess_correctness(current_guess, guessing_number) == False:
+        current_guess = input("Guess a number between " + str(lower_bound) + " and " + str(upper_bound) + ": " )
         while check_guess(current_guess) == False:
             current_guess = input("Guess a number between " + str(lower_bound) + " and " + str(upper_bound) + ": " )
+        current_guess = int(current_guess)
         counter+=1
         give_hint(current_guess, guessing_number)
 
