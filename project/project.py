@@ -31,13 +31,15 @@ def check_bounds(lower, upper):
 
     return True
 
+def generate_random_number(lower, upper):
+    guessing_number = random.randint(lower, upper)
+    return guessing_number
+
 if __name__ == "__main__":
      main()
 
 
-def generate_random_number(lower, upper):
-    guessing_number = random.randint(lower, upper)
-    return guessing_number
+
 
 
 
