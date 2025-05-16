@@ -70,10 +70,10 @@ def check_guess_correctness(user_guess, random_generated_number):
 
 def give_hint(user_guess, random_generated_number):
     if int(user_guess) > random_generated_number:
-        print("Guess a number that's lower")
+        return("Guess a number that's lower")
 
     else:
-        print("Guess a number that's higher")
+        return("Guess a number that's higher")
 
 
 def finished(counter, random_generated_number, lower_bound, upper_bound):
