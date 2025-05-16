@@ -23,6 +23,7 @@ def main():
 
     while check_guess(current_guess) == False:
             current_guess = input("Guess a number between " + str(lower_bound) + " and " + str(upper_bound) + ": " )
+            give_hint(current_guess, guessing_number)
 
     current_guess = int(current_guess)
 
