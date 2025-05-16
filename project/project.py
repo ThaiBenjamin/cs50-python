@@ -13,7 +13,17 @@ def main():
         lower_bound = input("What is your lower bound: ")
         upper_bound = input("What is your upper bound: ")
 
+    lower_bound = int(lower_bound)
+    upper_bound = int(upper_bound)
+
     guessing_number = generate_random_number(lower_bound, upper_bound)
+
+    counter = 0
+    while check_guess(current_guess, guessing_number) != True:
+        current_guess = input("Guess a number between " + str(lower_bound) + " and " + str(upper_bound) + ": " ))
+
+        counter+=1
+
     print(guessing_number)
 
 
@@ -35,29 +45,23 @@ def generate_random_number(lower, upper):
     guessing_number = random.randint(lower, upper)
     return guessing_number
 
-if __name__ == "__main__":
-     main()
-
-
-
-
-
-
-
-"""
+def guess_number(guess, random_number)
 counter = 0
 current_guess = None
 
-while current_guess != guessing_number:
+def check_guess(user_guess, random_generated_number):
+    try:
+        current_guess = int(user_guess)
+    except ValueError:
+        print("Please input a valid integer")
+        return False
 
-    while True:
-        try:
-            current_guess = int(input("Guess a number between " + str(lower_bound) + " and " + str(upper_bound) + ": " ))
-            break
-        except ValueError:
-            print("Please input a valid integer")
+    if current_guess != random_generated_number:
+        return False
 
     if current_guess == guessing_number:
+        return True
+
         print("The number was " + str(guessing_number) + ", you got it correct!")
         counter += 1
         if counter <= math.floor(math.log(upper_bound-lower_bound+1, 2)):
@@ -82,6 +86,7 @@ while current_guess != guessing_number:
         print("Guess a number that's lower")
         counter += 1
 
-
+if __name__ == "__main__":
+     main()
 
 """
