@@ -13,19 +13,16 @@ def main():
         lower_bound = input("What is your lower bound: ")
         upper_bound = input("What is your upper bound: ")
 
-    print("It works")
+    guessing_number = generate_random_number(lower_bound, upper_bound)
+    print(guessing_number)
 
-    """
-    if check_bounds(lower_bound, upper_bound):
-        generate_random_number(lower_bound, upper_bound)
-    """
 
 def check_bounds(lower, upper):
     try:
         lower_bound = int(lower)
         upper_bound = int(upper)
     except ValueError:
-        print("Please print a valid integer")
+        print("Please use valid integer(s)")
         return False
 
     if lower_bound >= upper_bound:
@@ -37,13 +34,15 @@ def check_bounds(lower, upper):
 if __name__ == "__main__":
      main()
 
-"""
+
 def generate_random_number(lower, upper):
+    guessing_number = random.randint(lower, upper)
+    return guessing_number
 
 
 
-guessing_number = random.randint(lower_bound, upper_bound)
 
+"""
 counter = 0
 current_guess = None
 
