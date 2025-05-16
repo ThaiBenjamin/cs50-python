@@ -13,10 +13,12 @@ def main():
         lower_bound = input("What is your lower bound: ")
         upper_bound = input("What is your upper bound: ")
 
+    print("It works")
 
+    """
     if check_bounds(lower_bound, upper_bound):
         generate_random_number(lower_bound, upper_bound)
-
+    """
 
 def check_bounds(lower, upper):
     try:
@@ -26,17 +28,16 @@ def check_bounds(lower, upper):
         print("Please print a valid integer")
         return False
 
-    while lower_bound >= upper_bound:
+    if lower_bound >= upper_bound:
             print("Make sure your lower bound is smaller than your upper bound")
-            while True:
-                try:
-                    lower_bound = int(input("What is your lower bound: "))
-                    upper_bound = int(input("What is your upper bound: "))
-                    break
-                except ValueError:
-                    print("Please input a valid integer")
+            return False
+
     return True
 
+if __name__ == "__main__":
+     main()
+
+"""
 def generate_random_number(lower, upper):
 
 
@@ -82,3 +83,4 @@ while current_guess != guessing_number:
 
 
 
+"""
