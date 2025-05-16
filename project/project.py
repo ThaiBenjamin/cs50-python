@@ -32,6 +32,7 @@ def main():
             current_guess = input("Guess a number between " + str(lower_bound) + " and " + str(upper_bound) + ": " )
         current_guess = int(current_guess)
         counter+=1
+        print(counter)
         give_hint(current_guess, guessing_number)
 
     victory_decider(counter, guessing_number, lower_bound, upper_bound)
