@@ -1,50 +1,52 @@
-CS50 — Introduction to Programming with Python
+# 🐍 CS50 — Introduction to Programming with Python
 
-This repository contains my completed problem sets, exercises, and final project for  
-**CS50’s Introduction to Programming with Python**.
+My completed problem sets, exercises, and final project for Harvard's **CS50P: Introduction to Programming with Python** — covering Python from the fundamentals through OOP, regex, file I/O, and API usage.
 
-Each directory includes source code, and many assignments are supported by test cases to validate behavior and edge cases.
-
----
-Assignments & Exercises
-
-- `adieu/` — string formatting and joining
-- `bank/` — conditionals and input handling
-- `bitcoin/` — API requests and JSON usage
-- `camel.py` — camelCase ↔ snake_case conversion
-- `coke/` — loops and change calculation
-- `deep/` — conditional return logic
-- `einstein/` — arithmetic and variables
-- `emojize/` — emoji conversion using external library
-- `extensions/` — file extension → MIME type
-- `faces/` — replacing characters in strings
-- `figlet/` — command-line arguments and external fonts
-- `fuel/` — fraction parsing & exception handling
-- `grocery/` — frequency counting using dictionaries
-- `indoor.py` — input formatting
-- `interpreter/` — basic expression evaluation
-- `jar/` — object-oriented programming exercise
-- `lines/` — reading files & counting logical lines
-- `meal/` — time parsing and condition checks
-- `numb3rs/` — validating IP addresses using regex
-- `nutrition/` — JSON lookup and dictionary access
-- `outdated/` — date normalization and string parsing
-- `pizza/` — CSV reading and table formatting
-- `plates/` — state plate validation rules
-- `playback.py` — string substitution
-- `professor/` — repeated input, scoring, randomness
-- `response/` — email validation using regex
-- `scourgify/` — CSV cleanup and rewriting
-- `seasons/` — timedelta + natural language conversion
-- `shirtificate/` — image editing with Pillow
-- `shirts/` — bulk image processing
-- `taqueria/` — running total menu calculator
-- `tip/` — percentage and formatting calculations
-- `twttr/` — vowel-removal string transformation
-- `um/` — detecting filler words with regex
-- `watch/` — parsing YouTube URLs
-- `working/` — time range conversion and regex
+![Python](https://img.shields.io/badge/Python-3-3776AB?logo=python&logoColor=white)
+![CS50](https://img.shields.io/badge/Harvard-CS50P-A51C30?logo=harvard-university&logoColor=white)
 
 ---
-Final Project
-- `game/` — a randomized number guessing game with error handling
+
+## 📚 What I Was Learning
+
+Python programming from the ground up — core data types, control flow, functions, OOP, regular expressions, file handling, API calls, and testing with pytest.
+
+---
+
+## 🔑 Key Things Practiced
+
+- **Functions & Control Flow** — Conditionals, loops, exception handling
+- **Data Structures** — Lists, dictionaries, sets for frequency counting and lookup
+- **OOP** — Classes, `__init__`, instance methods (`jar/` exercise)
+- **Regular Expressions** — Pattern matching for validation (`numb3rs/`, `um/`, `response/`, `working/`)
+- **File I/O** — Reading and writing CSV files, counting lines (`pizza/`, `scourgify/`, `lines/`)
+- **API Calls** — JSON parsing and HTTP requests (`bitcoin/`)
+- **Image Processing** — Manipulating images with Pillow (`shirtificate/`, `shirts/`)
+- **Testing** — Writing pytest test cases alongside implementations
+
+---
+
+## 📁 Assignments
+
+| Assignment | Concept |
+|------------|---------|
+| `einstein/` | Arithmetic and variables |
+| `bank/` | Conditionals and input handling |
+| `camel.py` | camelCase ↔ snake_case conversion |
+| `coke/` | Loops and change calculation |
+| `fuel/` | Fraction parsing & exception handling |
+| `grocery/` | Frequency counting with dictionaries |
+| `jar/` | Object-oriented programming |
+| `numb3rs/` | IP address validation with regex |
+| `bitcoin/` | API requests and JSON |
+| `pizza/` | CSV reading and table formatting |
+| `seasons/` | timedelta and natural language conversion |
+| `shirtificate/` | PDF and image editing with Pillow |
+| `game/` | Final project — number guessing game |
+| *(+ 20 more)* | |
+
+---
+
+## 💡 What It Taught Me
+
+CS50P gave me a systematic foundation in Python rather than just picking things up ad hoc. The problem sets are cleverly designed: each one is small enough to finish in a sitting, but targets one concept precisely. The regex problems (`numb3rs`, `um`, `working`) were a turning point — I'd been avoiding regex, but these exercises made me realize how much simpler it makes string validation once you understand the syntax. Writing `pytest` tests alongside my code changed how I think about correctness: a passing program and a tested program are very different things.
